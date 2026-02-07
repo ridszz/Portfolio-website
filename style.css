@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   line-height: 1.6;
@@ -33,10 +36,30 @@ nav ul {
 }
 
 nav a {
+  position: relative;
   color: white;
   text-decoration: none;
   margin-left: 20px;
+  padding-bottom: 4px;
 }
+
+/* underline */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #3ef2f2;
+  transition: width 0.3s ease;
+}
+
+/* hover effect */
+nav a:hover::after {
+  width: 100%;
+}
+
 
 .hero {
   height: 90vh;
@@ -55,6 +78,35 @@ section {
   padding: 60px;
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+/* CV button */
+.primary-btn,
+.cv-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  background: transparent;
+  border: 1px solid #3ef2f2;
+  color: #3ef2f2;
+  transition: all 0.3s ease;
+}
+
+.cv-btn:hover {
+  background: #3ef2f2;
+  color: #000;
+}
+
+.primary-btn:hover {
+  background: #3ef2f2;
+  color: #000;
+}
 .project-card {
   padding: 1px;
   margin-top: 20px;
@@ -66,6 +118,8 @@ section {
 
 .about-section h2 {
   margin-bottom: 30px;
+    color: #3ef2f2;
+
 }
 
 .about-card {
@@ -132,6 +186,10 @@ section {
   justify-content: center;
 }
 
+.title{
+    color:  #3ef2f2;
+}
+
 .skills-grid {
   display: none;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -166,7 +224,10 @@ section {
 .projects-list {
   margin-top: 40px;
 }
-
+.heading{
+      color:  #3ef2f2;
+      text-align: center;
+    }
 .project-item {
   display: flex;
   justify-content: space-between;
@@ -369,3 +430,19 @@ section {
   color: #000;
   width: 160px;
 }
+.social-icons a {
+  text-decoration: none;
+}
+
+.social-icons i {
+  color: #3ef2f2;
+  font-size: 22px;
+  margin-right: 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
+  color: #ffffff;
+}
+

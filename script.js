@@ -25,19 +25,19 @@ const projects = {
     title: "AI based Document Forgery Detection Tool.",
     desc: "Developed an AI-based document forgery detection system using Python and machine learning techniques to identify tampered or manipulated documents. Implemented preprocessing, feature extraction, and classification to analyze document authenticity through a web interface.",
     image: "assets/images/engine.png",
-    link: "#"
+    link: "https://github.com/ridszz/document-forgery-detector"
   },
   attendance: {
     title: "Patient Information & Appointment Management Web Application",
     desc: "Converted a desktop-based patient information and appointment booking system into a web application using Node.js, Express, and SQLite. Implemented secure authentication, database-driven patient data retrieval, and appointment scheduling with server-side validation.",
     image: "assets/images/attendance.png",
-    link: "#"
+    link: "https://github.com/ridszz/Landing-page"
   },
   safecount: {
     title: "E commerce website",
     desc: "Built a responsive e-commerce website featuring product listings, cart management, and checkout flow. Focused on clean UI, reusable components, and real-world user interactions to simulate an online shopping experience.",
     image: "assets/images/safecount.png",
-    link: "#"
+    link: "https://github.com/ridszz/E-commerce-website"
   }
 };
 
