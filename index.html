@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riddhi Sawant | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h2 class="logo">Riddhi</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <h1>Hi, I'm <span>Riddhi Sawant</span></h1>
+    <p>Web Developer | Cybersecurity Enthusiast</p>
+    <button onclick="scrollToSection('projects')">View Projects</button>
+  </section>
+
+  <!-- About -->
+<section id="about" class="about-section">
+  <h2>About Me</h2>
+
+  <div class="about-card">
+    <p>
+      I am a Web and Database Development Intern with hands-on experience
+      building real-world applications such as employee attendance systems,
+      POS modules, and secure cash management tools.<br> I enjoy creating clean,
+      user-friendly interfaces and integrating them with reliable backend
+      systems. I am also exploring cybersecurity and AI-based applications
+      to strengthen my problem-solving and technical skills.
+    </p>
+  </div>
+</section>
+
+
+  <!-- Skills -->
+  <section id="skills" class="skills-section">
+  <h2>Skills</h2>
+<br><br>
+  <!-- Tabs -->
+  <div class="skills-tabs">
+    <button class="tab active" onclick="showSkills('frontend')">Frontend</button>
+    <button class="tab" onclick="showSkills('backend')">Backend</button>
+    <button class="tab" onclick="showSkills('tools')">Tools</button>
+  </div>
+<br>
+  <!-- Skill Content -->
+  <div class="skills-content">
+
+    <div class="skills-grid active" id="frontend">
+      <div class="skill-card">JS</div>
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
+      <div class="skill-card">React</div>
+    </div>
+
+    <div class="skills-grid" id="backend">
+      <div class="skill-card">Python</div>
+      <div class="skill-card">Java</div>
+      <div class="skill-card">MySQL</div>
+      <div class="skill-card">Firebase</div>
+    </div>
+
+    <div class="skills-grid" id="tools">
+      <div class="skill-card">Git</div>
+      <div class="skill-card">Canva</div>
+      <div class="skill-card">Figma</div>
+      <div class="skill-card">GitHub</div>
+
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Projects -->
+  <section id="projects" class="projects-section">
+  <h2>My Selected Projects</h2>
+
+  <div class="projects-list">
+    <div class="project-item" onclick="openProject('engine')">
+      <div>
+        <h3>AI based Document Forgery Detection Tool.</h3>
+        <p> Python Flask React TensorFlow OpenCV</p>
+      </div>
+      <span>Read More →</span>
+    </div>
+
+    <div class="project-item" onclick="openProject('attendance')">
+      <div>
+        <h3>Patient Information & Appointment Management Web Application</h3>
+        <p>HTML CSS JavaScript</p>
+      </div>
+      <span>Read More →</span>
+    </div>
+
+    <div class="project-item" onclick="openProject('safecount')">
+      <div>
+        <h3>E commerce website</h3>
+        <p> HTML CSS JavaScript</p>
+      </div>
+      <span>Read More →</span>
+    </div>
+  </div>
+</section>
+
+<!-- Project Preview -->
+<div class="project-preview" id="projectPreview">
+  <div class="preview-card">
+    <button class="close-btn" onclick="closeProject()">✕</button>
+
+    <img id="previewImage" src="" alt="Project">
+
+    <h3 id="previewTitle"></h3>
+    <p id="previewDesc"></p>
+
+    <a id="previewLink" href="#" target="_blank">View Project ↗</a>
+  </div>
+</div>
+
+<!--Experience-->
+<section id="experience" class="experience-section">
+  <h2>Experience</h2>
+
+  <div class="timeline">
+    <div class="timeline-line"></div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+
+      <div class="experience-card">
+        <h3>Web & Database Development Intern</h3>
+        <span> Bhookie | April 2025 - July 2025 </span>
+
+        <ul>
+          <li>Developed internal tools including Safe Count and Banking modules for daily cash management .</li>
+          <li>Built an employee attendance management system with multi-session tracking.</li>
+          <li>Improved POS UI and enhanced item selection workflows.</li>
+          <li>Enhanced the restaurant’s website to improve UI and functionality.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="contact-section">
+  <h2>Contact Me</h2>
+
+  <div class="contact-container">
+    <!-- Left: Contact Info -->
+    <div class="contact-info">
+      <p><span>✉</span> riddhi@email.com</p>
+      <p><span>📞</span> +91 9876543210</p>
+      <p><span>📍</span> India</p>
+      <p><span>⏰</span> Available: Mon–Fri, 9AM–6PM</p>
+
+      <div class="social-icons">
+        <span>🐙</span>
+        <span>💼</span>
+        <span>✈</span>
+      </div>
+    </div>
+
+    <!-- Right: Contact Form -->
+   <form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  class="contact-form"
+>
+  <!-- REQUIRED hidden input -->
+  <input type="hidden" name="form-name" value="contact">
+
+  <input type="text" name="name" placeholder="Name" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <textarea name="message" placeholder="Message" rows="5" required></textarea>
+
+  <button type="submit">Send Message</button>
+</form>
+<p class="form-success" hidden>
+  Thanks! Your message has been sent.
+</p>
+
+  </div>
+</section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
